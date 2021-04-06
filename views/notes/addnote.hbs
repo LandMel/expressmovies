@@ -1,0 +1,14 @@
+<form action="/notes/addnote" method="POST">
+    <input type="hidden" value="add">
+    <input type="text" name="title" placeholder="title" id="title">
+    <br><input type="text" name="author" placeholder="author" id="author">
+    <br><select name="priority" id="priority">
+        
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+        <option value="Epic">Epic</option>
+    </select>
+    <br><textarea name="note" id="note" cols="30" rows="10" placeholder="note"></textarea>
+    <br><input type="submit" value="soumettre">
+</form>

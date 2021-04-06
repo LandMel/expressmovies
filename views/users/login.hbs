@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<h2>Login page</h2>
+{{log document}}
+<form action="/users/login" method="POST">
+    <label for="email">Courriel</label>
+    <input type="email" name="email" id="email" {{#if email}} value={{email}} {{/if}}>
+    <br><label for="password">Mot de passe</label>
+    <input type="password" name="password" id="password">
+    <br><input type="submit" value="Soumettre">
+</form>
+
+<a href="/users/register">Créer un compte</a>

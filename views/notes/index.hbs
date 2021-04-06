@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+
+
+<a href="/notes/addnote">Add note</a>
+
+{{#each notes}}
+<a href="/notes/get/{{this.id}}">
+    <h2>{{this.title}}</h2>
+    <h3>{{this.author}}</h3>
+    <p>{{this.note}}</p>
+</a>
+<hr>
+
+{{/each}}
+

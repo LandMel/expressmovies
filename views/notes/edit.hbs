@@ -1,0 +1,13 @@
+<form action="/notes/update/{{note.id}}" method="POST">
+    <input type="hidden" value="edit">
+    <input type="text" name="title" placeholder="title" id="title" value="{{note.title}}">
+    <br><input type="text" name="author" placeholder="author" id="author" value="{{note.author}}">
+    <br><select name="priority" id="priority">
+        <option value="Low"{{#if_eq note.priority 'Low' }} selected {{/if_eq}}>Low</option>
+        <option value="Medium" {{#if_eq note.priority 'Medium' }} selected {{/if_eq}}>Medium</option>
+        <option value="High" {{#if_eq note.priority 'High' }} selected {{/if_eq}}>High</option>
+        <option value="Epic" {{#if_eq note.priority 'Epic' }} selected {{/if_eq}} >Epic</option>
+    </select>
+    <br><textarea name="note" id="note" cols="30" rows="10" placeholder="note">{{note.note}}</textarea>
+    <br><input type="submit" value="soumettre">
+</form>
