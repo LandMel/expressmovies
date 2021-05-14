@@ -23,7 +23,7 @@ exports.addNote = function(data){
 }
 
 exports.getByType = function (type) {
-    var data = [];
+    let data = [];
     for ( let i = 0 ; i < notes.length ; i++){
         if (notes[i].type == type){
             data.push(notes[i]);

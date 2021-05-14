@@ -26,6 +26,7 @@ db.once('open', function() {
 const indexRouter = require('./routes/index');
 const notesRouter = require('./routes/notes');
 const usersRouter = require('./routes/users');
+const apiNotesRouter = require('./routes/api/apiNotes');
 
 const app = express();
 
@@ -52,7 +53,7 @@ app.use(exSession({
   saveUninitialized: false
   })
 );
-
+app.use('/api/v1/notes', apiNotesRouter)
 
 app.use('/', indexRouter);
 app.use('/notes', notesRouter);
